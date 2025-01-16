@@ -1,0 +1,199 @@
+
+/* ？画面全体の横幅が、少しスクロール可能な状態になってしまう、何故？ */
+/* ブラウザの横幅いっぱいに表示部分が広がっていてほしい */
+/* ナビゲーションのリンク、文字色や背景色やフォント、スクロールが出る原因 */
+/* * {
+	outline: 1px solid magenta;
+} */
+
+body {
+  margin: 0;
+  color: #000000;
+  background-color: #ffffff;
+  font-family: "Noto Sans JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ヘッダー */
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 16px;
+  margin: 0 auto;
+  font-size: 34px;
+  max-width: 980px;
+}
+.top-title {
+  border: 1px solid;
+  padding: 5px;
+  /* margin-right: 490px; */
+}
+.top-navigation {
+  margin: auto 0;
+  font-weight: bold;
+  /* margin-left: 490px; */
+}
+.top-underList{
+  display: flex;
+  list-style: none;
+}
+.top-underList a {
+  text-decoration: none;
+}
+.top-ListAbout {
+  margin-right: 10%;
+}
+/* .top-ListWorks {
+  margin-left: 10%;
+} */
+
+/* メイン写真 */
+.mainPhoto-image {
+  width: 100%;
+  /* width: 100vw; */
+}
+
+/* 記事：About */
+
+#section-About {
+  display: flex;
+}
+.About {
+  margin: 0 auto;
+  width: 90%;
+}
+.About-title {
+  text-align: center;
+  font-size: 34px;
+}
+.About-content {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.About-content-imageFlame {
+  width: 50%;
+  /* ↓relative,absoluteでは中央配置が上手くできなかったため、flexで記述 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ↑ */
+}
+.About-content-imageFlame-image {
+  border-radius: 50%;
+  width: 50%;
+  /* ？position:absoluteを指定すると、親要素.About-content-imageFlameの縦幅が縮小される、何故？ */
+  /* position: absolute; */
+  
+  /* ？右にあるdivを貫通してmargin-rightが設定される、何故？ */
+  /* margin-right: 100px;  */
+}
+.About-content-article {
+  /* margin-left: 5%; */
+  width: 50%;
+}
+.About-content-article-title {
+  font-size: 24px;
+}
+.About-content-article-list {
+  font-size: 18px;
+}
+
+/* 記事：Works */
+.Works-title {
+  text-align: center;
+  font-size: 34px;
+}
+.Works-content {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+  /* ？autoで水平位置が中央にならない、何故？ */
+  /* margin: 0 auto; */
+}
+.Works-content-first,
+.Works-content-second, 
+.Works-content-third {
+  display: flex;
+  flex-direction: column;
+  /* flex: 1; */
+  /* width: 30%; */
+  margin: 0 10px;
+}
+
+.Works-content-first-text,
+.Works-content-second-text,
+.Works-content-third-text {
+  /* display: block; */
+  font-size: 18px;
+}
+
+/* フッター：コピーライト */
+.footer-copyright {
+  margin-top: 50px;
+}
+.footer-copyright-text {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* 
+スマホ用レイアウト
+*/
+@media screen and (max-width: 767px) {
+  /* ヘッダー */
+  .top {
+    width: 90%;
+    /* padding: 0; */
+    margin: 0;
+  }
+  .top-title {
+    font-size: 28px;
+    /* width: 50%; */
+  }
+  .top-navigation {
+    font-size: 21px;
+    /* width: 50%; */
+  }
+  /* 記事：About */
+  .About-title {
+    font-size: 28px;
+  }
+  .About-content {
+    flex-direction: column;
+  }
+  .About-content-imageFlame {
+    width: 100%;
+    /* height: 50%; */
+  }
+  .About-content-imageFlame-image {
+    width: 100%;
+  }
+  .About-content-article {
+    width: 100%;
+    /* height: 50%; */
+  }
+
+  /* 記事：Works */
+  .Works-title {
+    font-size: 28px;
+  }
+  .Works-content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .Works-content-first,
+  .Works-content-second, 
+  .Works-content-third {
+    margin-bottom: 25px;
+  }
+  .Works-content-first-text,
+  .Works-content-second-text,
+  .Works-content-third-text {
+    /* display: block; */
+    text-align: center;
+  }
+}
