@@ -31,6 +31,9 @@ body {
   padding: 0 10px;
   /* margin-right: 490px; */
 }
+.top-title > a{
+  text-decoration: none;
+}
 .top-navigation {
   margin: auto 0;
   font-weight: bold;
@@ -47,7 +50,7 @@ body {
   /* margin-right: 10%; */
 }
 .top-ListWorks {
-  padding-left: 10px;
+  padding-left: 25px;
 }
 
 /* メイン写真 */
