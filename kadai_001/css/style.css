@@ -5,11 +5,12 @@
 /* * {
 	outline: 1px solid magenta;
 } */
-
-body {
-  margin: 0;
+* {
   color: #000000;
   background-color: #ffffff;
+}
+body {
+  margin: 0;
   font-family: "Noto Sans JP", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -27,7 +28,7 @@ body {
 }
 .top-title {
   border: 1px solid;
-  padding: 5px;
+  padding: 0 10px;
   /* margin-right: 490px; */
 }
 .top-navigation {
@@ -43,11 +44,11 @@ body {
   text-decoration: none;
 }
 .top-ListAbout {
-  margin-right: 10%;
+  /* margin-right: 10%; */
 }
-/* .top-ListWorks {
-  margin-left: 10%;
-} */
+.top-ListWorks {
+  padding-left: 10px;
+}
 
 /* メイン写真 */
 .mainPhoto-image {
@@ -95,6 +96,7 @@ body {
 }
 .About-content-article-title {
   font-size: 24px;
+  font-weight: bold;
 }
 .About-content-article-list {
   font-size: 18px;
@@ -120,7 +122,7 @@ body {
   display: flex;
   flex-direction: column;
   /* flex: 1; */
-  /* width: 30%; */
+  width: 35%;
   margin: 0 10px;
 }
 
@@ -164,6 +166,8 @@ body {
   }
   .About-content {
     flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
   }
   .About-content-imageFlame {
     width: 100%;
@@ -188,7 +192,8 @@ body {
   .Works-content-first,
   .Works-content-second, 
   .Works-content-third {
-    margin-bottom: 25px;
+    width: 80%;
+    margin: 0 auto 25px auto;
   }
   .Works-content-first-text,
   .Works-content-second-text,
